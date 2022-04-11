@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body .container {
+  width: 100%;
+  height: 100vh;
+  background-color: #2b2b2b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .container .card {
+  width: 380px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  cursor: pointer;
+}
+
+body .container .card .innerCard {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+body .container .card .innerCard .front {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+body .container .card .innerCard .front img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+body .container .card .innerCard .back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: #a34051;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+body .container .card .innerCard .back h2 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+body .container .card .innerCard .back p {
+  font-size: 26px;
+  font-weight: 300;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+body .container .card .innerCard .back .social a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body .container .card .innerCard .back .social a i {
+  font-size: 29px;
+  margin: 0 6px;
+}
+
+body .container .card .innerCard .back .btn {
+  color: #333;
+  font-size: 20px;
+  text-decoration: none;
+  background-color: #fff;
+  padding: 10px 50px;
+  border-radius: 25px;
+  margin: 80px auto 0;
+}
+
+body .container .card:hover .innerCard {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+/*# sourceMappingURL=styles.css.map */
